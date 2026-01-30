@@ -25,6 +25,7 @@ members = [
   "regex-lite",
   "regex-syntax",
   "regex-test",
+  "regex-automata/fuzz",
 ]
 
 # Features are documented in the "Crate features" section of the crate docs:
