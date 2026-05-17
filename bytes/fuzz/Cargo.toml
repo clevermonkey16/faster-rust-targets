@@ -1,0 +1,22 @@
+[package]
+name = "bytes-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+bytes = { path = ".." }
+libfuzzer-sys = { version = "0.4", features = ["arbitrary-derive"] }
+
+[[bin]]
+name = "bytes_ops"
+path = "fuzz_targets/bytes_ops.rs"
+test = false
+doc = false
+bench = false
+
+[workspace]
+members = ["."]
